@@ -1,0 +1,23 @@
+
+
+kubectl expose deployment rob-app --type=NodePort --port=8080 --dry-run=client -o yaml
+
+
+kubectl port-forward svc/argocd-server -n argocd 8080:443
+
+
+kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+
+
+eval $(minikube docker-env)
+
+
+minikube service rob-app
+
+
+
+
+
+https://minikube.sigs.k8s.io/docs/start/
+
+
