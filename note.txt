@@ -15,6 +15,9 @@ eval $(minikube docker-env)
 minikube service rob-app
 
 
+https://github.com/argoproj/argo-cd/blob/2a690388edcdc9ee39b3675cb481c2cf7d110ea6/docs/operator-manual/argocd-cm.yaml?utm_source=thenewstack&utm_medium=website&utm_campaign=platform#L272
+
+
 kubectl exec -i -t rob-app-54d6fdd7c6-wr46h -- /bin/bash
 
 
