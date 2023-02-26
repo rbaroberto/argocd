@@ -18,3 +18,19 @@ spec:
           ports:
             - containerPort: 8080
               protocol: TCP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  name: rob-app
+spec:
+  ports:
+  - port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: rob-app
+  type: NodePort
+status:
+  loadBalancer: {}              
