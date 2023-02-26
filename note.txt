@@ -15,7 +15,7 @@ eval $(minikube docker-env)
 minikube service rob-app
 
 
-
+kubectl exec -i -t rob-app-54d6fdd7c6-wr46h -- /bin/bash
 
 
 https://minikube.sigs.k8s.io/docs/start/
