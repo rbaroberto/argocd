@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rob-app
+spec:
+  selector:
+    matchLabels:
+      run: rob-app
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        run: rob-app
+    spec:
+      containers:
+        - name: rob-app
+          image: kicbase/echo-server:1.0
+          ports:
+            - containerPort: 8080
+              protocol: TCP
