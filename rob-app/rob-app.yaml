@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       run: rob-app
-  replicas: 5
+  replicas: 2
   template:
     metadata:
       labels:
@@ -31,6 +31,4 @@ spec:
     targetPort: 8080
   selector:
     run: rob-app
-  type: NodePort
-status:
-  loadBalancer: {}              
+  type: LoadBalancer
